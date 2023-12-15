@@ -1,0 +1,13 @@
+<%- include('header') -%>
+
+    <p>Mes QCMS disponibles</p>
+    <ul>
+        <% for (let qcm of qcms) { %>
+            <li>
+                <%= qcm.name %> (<%= qcm.subject %>) : <%= qcm.nbpoints %> points
+                            <a href="/qcms/<%= qcm.id %>">View Details</a>
+            </li>
+            <% } %>
+    </ul>
+
+    <%- include('footer') -%>
